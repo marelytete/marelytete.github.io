@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quimitata Quiz</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0fff0; padding: 20px; color: #333;">
+<p style="color: #2a7a2a;font-size: 48;"><b> Preguntas de quimica inorganica</b></p>
+  <nav>
+    <ol type="A" style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px;">
+      <li style="background-color: #d4f5d4; padding: 8px 12px; border-radius: 5px;">
+        <a href="#1" style="text-decoration: none; color: green; font-weight: bold;">Estructura atómica</a>
+      </li>
+      <li style="background-color: #d4f5d4; padding: 8px 12px; border-radius: 5px;">
+        <a href="#2" style="text-decoration: none; color: green; font-weight: bold;">Propiedades periódicas</a>
+      </li>
+      <li style="background-color: #d4f5d4; padding: 8px 12px; border-radius: 5px;">
+        <a href="#3" style="text-decoration: none; color: green; font-weight: bold;">Enlaces químicos</a>
+      </li>
+      <li style="background-color: #d4f5d4; padding: 8px 12px; border-radius: 5px;">
+        <a href="#4" style="text-decoration: none; color: green; font-weight: bold;">Compuestos inorgánicos</a>
+      </li>
+      <li style="background-color: #d4f5d4; padding: 8px 12px; border-radius: 5px;">
+        <a href="#5" style="text-decoration: none; color: green; font-weight: bold;">Cálculos químicos</a>
+      </li>
+    </ol>
+  </nav>
+
+  <section id="1" style="margin-top: 30px;">
+    <h2 style="color: #2a7a2a;">Estructura atómica</h2>
+
+    <form style="margin-bottom: 20px;">
+      <p>1. ¿Quién propuso el modelo atómico planetario?</p>
+      <input type="radio" name="ea1" value="Bohr"> Bohr<br>
+      <input type="radio" name="ea1" value="Thomson"> Thomson<br>
+      <input type="radio" name="ea1" value="Dalton"> Dalton<br>
+      <button type="button" onclick="revisar('ea1', 'Bohr', 'resp1')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="resp1"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>2. ¿Qué partícula tiene carga negativa?</p>
+      <input type="radio" name="ea2" value="Protón"> Protón<br>
+      <input type="radio" name="ea2" value="Electrón"> Electrón<br>
+      <input type="radio" name="ea2" value="Neutrón"> Neutrón<br>
+      <button type="button" onclick="revisar('ea2', 'Electrón', 'resp2')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="resp2"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>3. ¿Dónde se encuentran los protones y neutrones?</p>
+      <input type="radio" name="ea3" value="En la nube electrónica"> En la nube electrónica<br>
+      <input type="radio" name="ea3" value="En el núcleo"> En el núcleo<br>
+      <input type="radio" name="ea3" value="En los enlaces"> En los enlaces<br>
+      <button type="button" onclick="revisar('ea3', 'En el núcleo', 'resp3')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="resp3"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>4. ¿Cuál es la carga del neutrón?</p>
+      <input type="radio" name="ea4" value="Positiva"> Positiva<br>
+      <input type="radio" name="ea4" value="Negativa"> Negativa<br>
+      <input type="radio" name="ea4" value="Neutra"> Neutra<br>
+      <button type="button" onclick="revisar('ea4', 'Neutra', 'resp4')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="resp4"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>5. ¿Qué indica el número atómico?</p>
+      <input type="radio" name="ea5" value="Neutrones"> Neutrones<br>
+      <input type="radio" name="ea5" value="Electrones"> Electrones<br>
+      <input type="radio" name="ea5" value="Protones"> Protones<br>
+      <button type="button" onclick="revisar('ea5', 'Protones', 'resp5')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="resp5"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>6. ¿Cuál es la partícula más ligera?</p>
+      <input type="radio" name="ea6" value="Protón"> Protón<br>
+      <input type="radio" name="ea6" value="Electrón"> Electrón<br>
+      <input type="radio" name="ea6" value="Neutrón"> Neutrón<br>
+      <button type="button" onclick="revisar('ea6', 'Electrón', 'resp6')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="resp6"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>7. ¿Qué modelo atómico propuso esferas sólidas?</p>
+      <input type="radio" name="ea7" value="Bohr"> Bohr<br>
+      <input type="radio" name="ea7" value="Rutherford"> Rutherford<br>
+      <input type="radio" name="ea7" value="Dalton"> Dalton<br>
+      <button type="button" onclick="revisar('ea7', 'Dalton', 'resp7')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="resp7"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>8. ¿Quién descubrió el electrón?</p>
+      <input type="radio" name="ea8" value="Bohr"> Bohr<br>
+      <input type="radio" name="ea8" value="Thomson"> Thomson<br>
+      <input type="radio" name="ea8" value="Rutherford"> Rutherford<br>
+      <button type="button" onclick="revisar('ea8', 'Thomson', 'resp8')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="resp8"></p>
+    </form>
+  </section>
+
+<section id="2" style="margin-top: 30px;">
+  <h2 style="color: #2a7a2a;">Propiedades periódicas</h2>
+
+  <form style="margin-bottom: 20px;">
+    <p>1. ¿Qué propiedad periódica mide la capacidad de un átomo para atraer electrones?</p>
+    <input type="radio" name="pp1" value="Electronegatividad"> Electronegatividad<br>
+    <input type="radio" name="pp1" value="Radio atómico"> Radio atómico<br>
+    <input type="radio" name="pp1" value="Energía de ionización"> Energía de ionización<br>
+    <button type="button" onclick="revisar('pp1', 'Electronegatividad', 'ppresp1')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ppresp1"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>2. ¿Qué propiedad disminuye de izquierda a derecha en un periodo?</p>
+    <input type="radio" name="pp2" value="Electronegatividad"> Electronegatividad<br>
+    <input type="radio" name="pp2" value="Radio atómico"> Radio atómico<br>
+    <input type="radio" name="pp2" value="Afinidad electrónica"> Afinidad electrónica<br>
+    <button type="button" onclick="revisar('pp2', 'Radio atómico', 'ppresp2')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ppresp2"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>3. ¿Qué propiedad aumenta hacia la derecha y hacia arriba en la tabla?</p>
+    <input type="radio" name="pp3" value="Radio atómico"> Radio atómico<br>
+    <input type="radio" name="pp3" value="Electronegatividad"> Electronegatividad<br>
+    <input type="radio" name="pp3" value="Número atómico"> Número atómico<br>
+    <button type="button" onclick="revisar('pp3', 'Electronegatividad', 'ppresp3')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ppresp3"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>4. ¿Qué propiedad representa la energía necesaria para quitar un electrón?</p>
+    <input type="radio" name="pp4" value="Energía de ionización"> Energía de ionización<br>
+    <input type="radio" name="pp4" value="Electronegatividad"> Electronegatividad<br>
+    <input type="radio" name="pp4" value="Conductividad"> Conductividad<br>
+    <button type="button" onclick="revisar('pp4', 'Energía de ionización', 'ppresp4')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ppresp4"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>5. ¿Qué propiedad periódica está más relacionada con la formación de enlaces covalentes?</p>
+    <input type="radio" name="pp5" value="Radio iónico"> Radio iónico<br>
+    <input type="radio" name="pp5" value="Electronegatividad"> Electronegatividad<br>
+    <input type="radio" name="pp5" value="Conductividad térmica"> Conductividad térmica<br>
+    <button type="button" onclick="revisar('pp5', 'Electronegatividad', 'ppresp5')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ppresp5"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>6. ¿Qué elemento tiene el radio atómico más grande?</p>
+    <input type="radio" name="pp6" value="Francio"> Francio<br>
+    <input type="radio" name="pp6" value="Oxígeno"> Oxígeno<br>
+    <input type="radio" name="pp6" value="Cloro"> Cloro<br>
+    <button type="button" onclick="revisar('pp6', 'Francio', 'ppresp6')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ppresp6"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>7. ¿Qué sucede con la energía de ionización al bajar en un grupo?</p>
+    <input type="radio" name="pp7" value="Aumenta"> Aumenta<br>
+    <input type="radio" name="pp7" value="Disminuye"> Disminuye<br>
+    <input type="radio" name="pp7" value="Permanece igual"> Permanece igual<br>
+    <button type="button" onclick="revisar('pp7', 'Disminuye', 'ppresp7')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ppresp7"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>8. ¿Qué propiedad indica la tendencia a ganar electrones?</p>
+    <input type="radio" name="pp8" value="Afinidad electrónica"> Afinidad electrónica<br>
+    <input type="radio" name="pp8" value="Energía de ionización"> Energía de ionización<br>
+    <input type="radio" name="pp8" value="Radio atómico"> Radio atómico<br>
+    <button type="button" onclick="revisar('pp8', 'Afinidad electrónica', 'ppresp8')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ppresp8"></p>
+  </form>
+</section>
+<section id="3" style="margin-top: 30px;">
+  <h2 style="color: #2a7a2a;">Enlaces químicos</h2>
+
+  <form style="margin-bottom: 20px;">
+    <p>1. ¿Qué tipo de enlace se forma entre un metal y un no metal?</p>
+    <input type="radio" name="eq1" value="Covalente"> Covalente<br>
+    <input type="radio" name="eq1" value="Iónico"> Iónico<br>
+    <input type="radio" name="eq1" value="Metálico"> Metálico<br>
+    <button type="button" onclick="revisar('eq1', 'Iónico', 'eqresp1')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="eqresp1"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>2. ¿Cuál de estos enlaces comparte electrones?</p>
+    <input type="radio" name="eq2" value="Iónico"> Iónico<br>
+    <input type="radio" name="eq2" value="Covalente"> Covalente<br>
+    <input type="radio" name="eq2" value="Metálico"> Metálico<br>
+    <button type="button" onclick="revisar('eq2', 'Covalente', 'eqresp2')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="eqresp2"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>3. ¿Qué tipo de enlace permite la conducción eléctrica en estado sólido?</p>
+    <input type="radio" name="eq3" value="Metálico"> Metálico<br>
+    <input type="radio" name="eq3" value="Covalente"> Covalente<br>
+    <input type="radio" name="eq3" value="Iónico"> Iónico<br>
+    <button type="button" onclick="revisar('eq3', 'Metálico', 'eqresp3')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="eqresp3"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>4. ¿Qué tipo de enlace es más fuerte?</p>
+    <input type="radio" name="eq4" value="Metálico"> Metálico<br>
+    <input type="radio" name="eq4" value="Iónico"> Iónico<br>
+    <input type="radio" name="eq4" value="Covalente"> Covalente<br>
+    <button type="button" onclick="revisar('eq4', 'Covalente', 'eqresp4')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="eqresp4"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>5. ¿Cuál es una característica del enlace iónico?</p>
+    <input type="radio" name="eq5" value="Altos puntos de fusión"> Altos puntos de fusión<br>
+    <input type="radio" name="eq5" value="Formación de moléculas"> Formación de moléculas<br>
+    <input type="radio" name="eq5" value="Conducción en estado sólido"> Conducción en estado sólido<br>
+    <button type="button" onclick="revisar('eq5', 'Altos puntos de fusión', 'eqresp5')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="eqresp5"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>6. ¿Qué tipo de enlace mantiene unidos a los átomos en un metal?</p>
+    <input type="radio" name="eq6" value="Covalente"> Covalente<br>
+    <input type="radio" name="eq6" value="Metálico"> Metálico<br>
+    <input type="radio" name="eq6" value="Iónico"> Iónico<br>
+    <button type="button" onclick="revisar('eq6', 'Metálico', 'eqresp6')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="eqresp6"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>7. ¿Qué ocurre en un enlace covalente polar?</p>
+    <input type="radio" name="eq7" value="Electrones se comparten de forma equitativa"> Electrones se comparten de forma equitativa<br>
+    <input type="radio" name="eq7" value="Electrones se transfieren"> Electrones se transfieren<br>
+    <input type="radio" name="eq7" value="Electrones se comparten con desigualdad"> Electrones se comparten con desigualdad<br>
+    <button type="button" onclick="revisar('eq7', 'Electrones se comparten con desigualdad', 'eqresp7')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="eqresp7"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>8. ¿Qué tipo de enlace forma redes cristalinas regulares?</p>
+    <input type="radio" name="eq8" value="Metálico"> Metálico<br>
+    <input type="radio" name="eq8" value="Iónico"> Iónico<br>
+    <input type="radio" name="eq8" value="Covalente"> Covalente<br>
+    <button type="button" onclick="revisar('eq8', 'Iónico', 'eqresp8')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="eqresp8"></p>
+  </form>
+</section>
+<section id="4" style="margin-top: 30px;">
+  <h2 style="color: #2a7a2a;">Compuestos inorgánicos</h2>
+
+  <form style="margin-bottom: 20px;">
+    <p>1. ¿Cuál es la fórmula del agua?</p>
+    <input type="radio" name="ci1" value="H2O"> H₂O<br>
+    <input type="radio" name="ci1" value="HO2"> HO₂<br>
+    <input type="radio" name="ci1" value="H2O2"> H₂O₂<br>
+    <button type="button" onclick="revisar('ci1', 'H2O', 'ciresp1')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ciresp1"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>2. ¿Qué tipo de compuesto es el NaCl?</p>
+    <input type="radio" name="ci2" value="Óxido"> Óxido<br>
+    <input type="radio" name="ci2" value="Sal"> Sal<br>
+    <input type="radio" name="ci2" value="Hidróxido"> Hidróxido<br>
+    <button type="button" onclick="revisar('ci2', 'Sal', 'ciresp2')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ciresp2"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>3. ¿Qué compuesto es una base?</p>
+    <input type="radio" name="ci3" value="HCl"> HCl<br>
+    <input type="radio" name="ci3" value="NaOH"> NaOH<br>
+    <input type="radio" name="ci3" value="CO2"> CO₂<br>
+    <button type="button" onclick="revisar('ci3', 'NaOH', 'ciresp3')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ciresp3"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>4. ¿Cuál de los siguientes es un óxido ácido?</p>
+    <input type="radio" name="ci4" value="Na2O"> Na₂O<br>
+    <input type="radio" name="ci4" value="CO2"> CO₂<br>
+    <input type="radio" name="ci4" value="CaO"> CaO<br>
+    <button type="button" onclick="revisar('ci4', 'CO2', 'ciresp4')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ciresp4"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>5. ¿Qué compuesto se forma al reaccionar un ácido con una base?</p>
+    <input type="radio" name="ci5" value="Sal y agua"> Sal y agua<br>
+    <input type="radio" name="ci5" value="Óxido"> Óxido<br>
+    <input type="radio" name="ci5" value="Ácido fuerte"> Ácido fuerte<br>
+    <button type="button" onclick="revisar('ci5', 'Sal y agua', 'ciresp5')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ciresp5"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>6. ¿Cuál de los siguientes es un hidróxido?</p>
+    <input type="radio" name="ci6" value="H2SO4"> H₂SO₄<br>
+    <input type="radio" name="ci6" value="NaOH"> NaOH<br>
+    <input type="radio" name="ci6" value="NaCl"> NaCl<br>
+    <button type="button" onclick="revisar('ci6', 'NaOH', 'ciresp6')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ciresp6"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>7. ¿Qué compuesto pertenece a los ácidos?</p>
+    <input type="radio" name="ci7" value="HCl"> HCl<br>
+    <input type="radio" name="ci7" value="CaO"> CaO<br>
+    <input type="radio" name="ci7" value="Mg(OH)2"> Mg(OH)₂<br>
+    <button type="button" onclick="revisar('ci7', 'HCl', 'ciresp7')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ciresp7"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>8. ¿Qué ocurre en una reacción de neutralización?</p>
+    <input type="radio" name="ci8" value="Se forma oxígeno"> Se forma oxígeno<br>
+    <input type="radio" name="ci8" value="Se libera calor"> Se libera calor<br>
+    <input type="radio" name="ci8" value="Reaccionan ácido y base para formar sal y agua"> Reaccionan ácido y base para formar sal y agua<br>
+    <button type="button" onclick="revisar('ci8', 'Reaccionan ácido y base para formar sal y agua', 'ciresp8')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="ciresp8"></p>
+  </form>
+</section>
+<section id="5" style="margin-top: 30px;">
+  <h2 style="color: #2a7a2a;">Cálculos químicos</h2>
+
+  <form style="margin-bottom: 20px;">
+    <p>1. ¿Cuál es la masa molar del agua (H₂O)?</p>
+    <input type="radio" name="cq1" value="18 g/mol"> 18 g/mol<br>
+    <input type="radio" name="cq1" value="16 g/mol"> 16 g/mol<br>
+    <input type="radio" name="cq1" value="20 g/mol"> 20 g/mol<br>
+    <button type="button" onclick="revisar('cq1', '18 g/mol', 'cqresp1')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="cqresp1"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>2. ¿Cuántos moles hay en 36 g de agua (H₂O)?</p>
+    <input type="radio" name="cq2" value="1 mol"> 1 mol<br>
+    <input type="radio" name="cq2" value="2 mol"> 2 mol<br>
+    <input type="radio" name="cq2" value="0.5 mol"> 0.5 mol<br>
+    <button type="button" onclick="revisar('cq2', '2 mol', 'cqresp2')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="cqresp2"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>3. ¿Qué constante representa el número de Avogadro?</p>
+    <input type="radio" name="cq3" value="6.022 x 10²³"> 6.022 x 10²³<br>
+    <input type="radio" name="cq3" value="3.14"> 3.14<br>
+    <input type="radio" name="cq3" value="9.81"> 9.81<br>
+    <button type="button" onclick="revisar('cq3', '6.022 x 10²³', 'cqresp3')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="cqresp3"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>4. ¿Cuántos gramos pesa 1 mol de CO₂?</p>
+    <input type="radio" name="cq4" value="44 g"> 44 g<br>
+    <input type="radio" name="cq4" value="22 g"> 22 g<br>
+    <input type="radio" name="cq4" value="32 g"> 32 g<br>
+    <button type="button" onclick="revisar('cq4', '44 g', 'cqresp4')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="cqresp4"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>5. ¿Qué se necesita para hacer una estequiometría?</p>
+    <input type="radio" name="cq5" value="Fórmula química y masa"> Fórmula química y masa<br>
+    <input type="radio" name="cq5" value="Masa molar y reacción balanceada"> Masa molar y reacción balanceada<br>
+    <input type="radio" name="cq5" value="Un matraz"> Un matraz<br>
+    <button type="button" onclick="revisar('cq5', 'Masa molar y reacción balanceada', 'cqresp5')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="cqresp5"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>6. ¿Qué representa un mol?</p>
+    <input type="radio" name="cq6" value="La masa de una sustancia"> La masa de una sustancia<br>
+    <input type="radio" name="cq6" value="Una unidad de cantidad"> Una unidad de cantidad<br>
+    <input type="radio" name="cq6" value="Un volumen exacto"> Un volumen exacto<br>
+    <button type="button" onclick="revisar('cq6', 'Una unidad de cantidad', 'cqresp6')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="cqresp6"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>7. ¿Cuál es la unidad de la masa molar?</p>
+    <input type="radio" name="cq7" value="g/mol"> g/mol<br>
+    <input type="radio" name="cq7" value="kg"> kg<br>
+    <input type="radio" name="cq7" value="mol/g"> mol/g<br>
+    <button type="button" onclick="revisar('cq7', 'g/mol', 'cqresp7')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="cqresp7"></p>
+  </form>
+
+  <form style="margin-bottom: 20px;">
+    <p>8. Si tengo 2 moles de H₂, ¿cuántas moléculas tengo?</p>
+    <input type="radio" name="cq8" value="12.044 x 10²³"> 12.044 x 10²³<br>
+    <input type="radio" name="cq8" value="6.022 x 10²³"> 6.022 x 10²³<br>
+    <input type="radio" name="cq8" value="3.011 x 10²³"> 3.011 x 10²³<br>
+    <button type="button" onclick="revisar('cq8', '12.044 x 10²³', 'cqresp8')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+    <p id="cqresp8"></p>
+  </form>
+</section>
+  <script>
+    function revisar(nombre, correcta, idTexto) {
+      const seleccion = document.querySelector('input[name="' + nombre + '"]:checked');
+      const respuesta = document.getElementById(idTexto);
+      if (!seleccion) {
+        respuesta.innerText = "Selecciona una opción.";
+      } else if (seleccion.value === correcta) {
+        respuesta.innerText = "Correctooo :b";
+      } else {
+        respuesta.innerText = "Intenta de nuevo, tu puedes nwn";
+      }
+    }
+  </script>
+   <p>Gracias por visitar, espero que aprendan mucho aquí :b</p>
+    <p>Hecho por López Salmerón Marely de 4°A p/m, junio (el mejor mes porque regresa BTS)</p>
+    <p>Te amo tete :3</p>
+</body>
+</html>

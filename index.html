@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¡Bienvenida a Quimitata!</title>
+  <style>
+    body {
+      background-color: aliceblue;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      color: darkgreen;
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      margin: 12px;
+      padding: 15px 30px;
+      font-size: 1em;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.07);
+    }
+
+    .organica {
+      background-color: #ebb6c7;
+    }
+
+    .inorganica {
+      background-color: #e5b9ec; 
+    }
+
+    .experiencia {
+      background-color: #b3eeae;
+      margin-top: 20px;
+    }
+
+    .preguntas {
+      background-color: #ecb9c8; 
+    }
+
+    .galeria {
+      background-color: #d6a2cf; 
+    }
+
+    .gif-section {
+      margin-top: 25px;
+    }
+
+    .gif-section img {
+      height: 240px;
+      width: auto;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 0.95em;
+      color: #141414;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .button {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+        padding: 14px;
+        font-size: 1em;
+      }
+
+      .gif-section img {
+        height: 240px; /* mantenemos el tamaño fijo */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¡Bienvenidos a Quimitata!</h1>
+  <p>Descubre lo más asombroso de la Química Orgánica e Inorgánica.</p>
+
+  <a href="organica.html" class="button organica">Química Orgánica</a>
+  <a href="inorganica.html" class="button inorganica">Química Inorgánica</a>
+
+  <div class="gif-section">
+    <p style="color: darkgreen;">Diferencias entre la química orgánica e inorgánica (clic en el gif):</p>
+    <a href="https://www.youtube.com/watch?v=N0GwGJFpYRM" target="_blank">
+      <img src="quimica.png" alt="Gif explicativo">
+    </a>
+  </div>
+
+  <p>Pon a prueba tu conocimiento</p>
+  <a href="preguntas.html" class="button preguntas">Preguntas</a>
+
+  <p>Galería y jueguito</p>
+  <a href="galeria.html" class="button galeria">Galería</a>
+
+  <a href="conclusion.html" class="button experiencia">Mi experiencia</a>
+
+  <div class="footer">
+    <p>Gracias por visitar, espero que aprendan mucho aquí :b</p>
+    <p>Hecho por López Salmerón Marely de 4°A p/m, junio (el mejor mes porque regresa BTS)</p>
+    <p>Te amo tete :3</p>
+  </div>
+
+</body>
+</html>
+

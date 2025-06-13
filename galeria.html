@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería Química Creativa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0fff0;
+      color: #333;
+      margin: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: darkgreen;
+      margin-bottom: 5px;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .marco {
+      width: 230px;
+      padding: 10px;
+      border: 5px solid #a1d99b;
+      border-radius: 30px;
+      background-color: white;
+      transition: transform 0.3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .marco:hover {
+      transform: scale(1.07);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .clip-estrella img {
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    .clip-corazon img {
+      clip-path: path("M24.5,5.8c-4.6,0-7.4,3.2-8.5,5.4c-1.1-2.3-3.9-5.4-8.5-5.4C2.5,5.8,0,9.1,0,13.5 c0,6.9,12.3,14.3,16,17.3c3.7-3.1,16-10.5,16-17.3C32,9.1,29.5,5.8,24.5,5.8z");
+    }
+
+    .clip-rombo img {
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    .clip-nube img {
+      clip-path: ellipse(50% 40% at 50% 50%);
+    }
+
+    .clip-flor img {
+      clip-path: polygon(50% 0%, 60% 20%, 80% 20%, 65% 35%, 70% 55%, 50% 45%, 30% 55%, 35% 35%, 20% 20%, 40% 20%);
+    }
+
+    .clip-gota img {
+      clip-path: path("M50 0 C70 40, 100 60, 50 100 C0 60, 30 40, 50 0 Z");
+    }
+
+    .clip-cuadro img {
+      border-radius: 20px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .titulo-img {
+      margin-top: 10px;
+      font-weight: bold;
+      color: darkgreen;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Galería Química</h1>
+  <p>¡Por si lo tuyo es lo visual!</p>
+
+  <div class="galeria">
+
+    <a href="https://www.cerebriti.com/juegos-de-qu%C3%ADmica/tag/mas-recientes/" target="_blank" class="marco clip-estrella">
+      <img src="https://i.pinimg.com/736x/46/ea/70/46ea70bc141d119aa85073afaa0ba2e5.jpg" alt="Juego Químico">
+      <div class="titulo-img">Juego Químico ⭐</div>
+    </a>
+
+    <div class="marco clip-cuadro">
+      <img src="estructuratomica.png" alt="estructura-atomica">
+      <div class="titulo-img">Estructura atomica </div>
+    </div>
+    <div class="marco clip-rombo">
+      <img src="propiedadesperiodicas.png" alt="Propiedades Periódicas">
+      <div class="titulo-img">Propiedades Periódicas 🔷</div>
+    </div>
+    <div class="marco clip-flor">
+      <img src="enlacesquimicos.png" alt="Enlaces Químicos">
+      <div class="titulo-img">Enlaces Químicos 🌸</div>
+    </div>
+    <div class="marco clip-cuadro">
+      <img src="compuestosinorgancios.png" alt="Compuestos Inorgánicos">
+      <div class="titulo-img">Compuestos Inorgánicos 🧂</div>
+    </div>
+    <div class="marco clip-nube">
+      <img src="calculosquimicos.png" alt="Cálculos Químicos">
+      <div class="titulo-img">Cálculos Químicos ☁️</div>
+    </div>
+
+    <div class="marco clip-gota">
+      <img src="gruposfuncionales.png" alt="Grupos Funcionales">
+      <div class="titulo-img">Grupos Funcionales 💧</div>
+    </div>
+    <div class="marco clip-rombo">
+      <img src="isomeria.png" alt="Isomería">
+      <div class="titulo-img">Isomería 🔷</div>
+    </div>
+   
+    <div class="marco clip-cuadro">
+      <img src="reaccionesorganicas.png" alt="Reacciones Orgánicas">
+      <div class="titulo-img">Reacciones Orgánicas ⚗️</div>
+    </div>
+  </div>
+ <p>Gracias por visitar, espero que aprendan mucho aquí :b</p>
+    <p>Hecho por López Salmerón Marely de 4°A p/m, junio (el mejor mes porque regresa BTS)</p>
+    <p>Te amo tete :3</p>
+</body>
+</html>

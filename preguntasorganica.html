@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quimitata Quiz - Química Orgánica</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0fff0; padding: 20px; color: #333;">
+<p style="color: #2a7a2a;font-size: 48;"><b>Preguntas de quimica organica</b></p>
+  <nav>
+    <ol >
+      <li style="background-color: #d4f5d4; padding: 8px 12px; border-radius: 5px;">
+        <a href="#1" style="color: green; text-decoration: none; font-weight: bold;">Grupos funcionales</a>
+      </li>
+      <li style="background-color: #d4f5d4; padding: 8px 12px; border-radius: 5px;">
+        <a href="#2" style="color: green; text-decoration: none; font-weight: bold;">Isomería</a>
+      </li>
+      <li style="background-color: #d4f5d4; padding: 8px 12px; border-radius: 5px;">
+        <a href="#3" style="color: green; text-decoration: none; font-weight: bold;">Nomenclatura orgánica</a>
+      </li>
+      <li style="background-color: #d4f5d4; padding: 8px 12px; border-radius: 5px;">
+        <a href="#4" style="color: green; text-decoration: none; font-weight: bold;">Reacciones orgánicas</a>
+      </li>
+      <li style="background-color: #d4f5d4; padding: 8px 12px; border-radius: 5px;">
+        <a href="#5" style="color: green; text-decoration: none; font-weight: bold;">Reconocimiento de estructuras</a>
+      </li>
+    </ol>
+  </nav>
+
+  <section id="1" style="margin-top: 30px;">
+    <h2 style="color: #2a7a2a;">Grupos funcionales</h2>
+
+    <form style="margin-bottom: 20px;">
+      <p>1. ¿Qué grupo funcional caracteriza a los alcoholes?</p>
+      <input type="radio" name="gf1" value="-OH"> -OH<br>
+      <input type="radio" name="gf1" value="-COOH"> -COOH<br>
+      <input type="radio" name="gf1" value="-NH₂"> -NH₂<br>
+      <button type="button" onclick="revisar('gf1', '-OH', 'gfresp1')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="gfresp1"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>2. ¿Cuál es el grupo funcional de los ácidos carboxílicos?</p>
+      <input type="radio" name="gf2" value="-COOH"> -COOH<br>
+      <input type="radio" name="gf2" value="-CHO"> -CHO<br>
+      <input type="radio" name="gf2" value="-OH"> -OH<br>
+      <button type="button" onclick="revisar('gf2', '-COOH', 'gfresp2')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="gfresp2"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>3. ¿Qué grupo funcional tienen las cetonas?</p>
+      <input type="radio" name="gf3" value="C=O en el medio"> C=O en el medio<br>
+      <input type="radio" name="gf3" value="C=O al final"> C=O al final<br>
+      <input type="radio" name="gf3" value="-OH"> -OH<br>
+      <button type="button" onclick="revisar('gf3', 'C=O en el medio', 'gfresp3')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="gfresp3"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>4. ¿Qué grupo funcional tienen los aldehídos?</p>
+      <input type="radio" name="gf4" value="-CHO"> -CHO<br>
+      <input type="radio" name="gf4" value="-COOH"> -COOH<br>
+      <input type="radio" name="gf4" value="-O-"> -O-<br>
+      <button type="button" onclick="revisar('gf4', '-CHO', 'gfresp4')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="gfresp4"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>5. ¿Qué grupo funcional tienen las aminas?</p>
+      <input type="radio" name="gf5" value="-NH₂"> -NH₂<br>
+      <input type="radio" name="gf5" value="-OH"> -OH<br>
+      <input type="radio" name="gf5" value="-COOH"> -COOH<br>
+      <button type="button" onclick="revisar('gf5', '-NH₂', 'gfresp5')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="gfresp5"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>6. ¿Cuál es el grupo funcional de los éteres?</p>
+      <input type="radio" name="gf6" value="-O-"> -O-<br>
+      <input type="radio" name="gf6" value="-OH"> -OH<br>
+      <input type="radio" name="gf6" value="-NH₂"> -NH₂<br>
+      <button type="button" onclick="revisar('gf6', '-O-', 'gfresp6')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="gfresp6"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>7. ¿Qué grupo funcional caracteriza a los ésteres?</p>
+      <input type="radio" name="gf7" value="-COO-"> -COO-<br>
+      <input type="radio" name="gf7" value="-CHO"> -CHO<br>
+      <input type="radio" name="gf7" value="-OH"> -OH<br>
+      <button type="button" onclick="revisar('gf7', '-COO-', 'gfresp7')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="gfresp7"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>8. ¿Qué grupo funcional caracteriza a las amidas?</p>
+      <input type="radio" name="gf8" value="-CONH₂"> -CONH₂<br>
+      <input type="radio" name="gf8" value="-COOH"> -COOH<br>
+      <input type="radio" name="gf8" value="-NH₂"> -NH₂<br>
+      <button type="button" onclick="revisar('gf8', '-CONH₂', 'gfresp8')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="gfresp8"></p>
+    </form>
+  </section>
+
+  <section id="2" style="margin-top: 30px;">
+    <h2 style="color: #2a7a2a;">Isomería</h2>
+
+    <form style="margin-bottom: 20px;">
+      <p>1. ¿Qué es un isómero?</p>
+      <input type="radio" name="iso1" value="Compuesto con misma fórmula molecular pero diferente estructura"> Compuesto con misma fórmula molecular pero diferente estructura<br>
+      <input type="radio" name="iso1" value="Compuesto con diferente fórmula molecular"> Compuesto con diferente fórmula molecular<br>
+      <input type="radio" name="iso1" value="Compuesto con diferente peso molecular"> Compuesto con diferente peso molecular<br>
+      <button type="button" onclick="revisar('iso1', 'Compuesto con misma fórmula molecular pero diferente estructura', 'isoresp1')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="isoresp1"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>2. ¿Cuál es un tipo de isomería estructural?</p>
+      <input type="radio" name="iso2" value="Isomería de cadena"> Isomería de cadena<br>
+      <input type="radio" name="iso2" value="Isomería geométrica"> Isomería geométrica<br>
+      <input type="radio" name="iso2" value="Isomería óptica"> Isomería óptica<br>
+      <button type="button" onclick="revisar('iso2', 'Isomería de cadena', 'isoresp2')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="isoresp2"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>3. ¿Qué isomería presenta compuestos con diferente disposición espacial?</p>
+      <input type="radio" name="iso3" value="Isomería espacial o estereoisomería"> Isomería espacial o estereoisomería<br>
+      <input type="radio" name="iso3" value="Isomería de cadena"> Isomería de cadena<br>
+      <input type="radio" name="iso3" value="Isomería de posición"> Isomería de posición<br>
+      <button type="button" onclick="revisar('iso3', 'Isomería espacial o estereoisomería', 'isoresp3')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="isoresp3"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>4. ¿Qué tipo de isomería depende de la disposición alrededor de un doble enlace?</p>
+      <input type="radio" name="iso4" value="Isomería geométrica"> Isomería geométrica<br>
+      <input type="radio" name="iso4" value="Isomería óptica"> Isomería óptica<br>
+      <input type="radio" name="iso4" value="Isomería de cadena"> Isomería de cadena<br>
+      <button type="button" onclick="revisar('iso4', 'Isomería geométrica', 'isoresp4')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="isoresp4"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>5. ¿Cuál es la isomería óptica?</p>
+      <input type="radio" name="iso5" value="Isomería que ocurre cuando un átomo de carbono tiene cuatro sustituyentes diferentes"> Isomería que ocurre cuando un átomo de carbono tiene cuatro sustituyentes diferentes<br>
+      <input type="radio" name="iso5" value="Isomería que depende del peso molecular"> Isomería que depende del peso molecular<br>
+      <input type="radio" name="iso5" value="Isomería que ocurre por diferentes cadenas"> Isomería que ocurre por diferentes cadenas<br>
+      <button type="button" onclick="revisar('iso5', 'Isomería que ocurre cuando un átomo de carbono tiene cuatro sustituyentes diferentes', 'isoresp5')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="isoresp5"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>6. ¿Qué es un enantiómero?</p>
+      <input type="radio" name="iso6" value="Isómeros ópticos que son imágenes especulares no superponibles"> Isómeros ópticos que son imágenes especulares no superponibles<br>
+      <input type="radio" name="iso6" value="Isómeros geométricos"> Isómeros geométricos<br>
+      <input type="radio" name="iso6" value="Isómeros estructurales"> Isómeros estructurales<br>
+      <button type="button" onclick="revisar('iso6', 'Isómeros ópticos que son imágenes especulares no superponibles', 'isoresp6')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="isoresp6"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>7. ¿Qué isomería tiene lugar por diferente posición de grupos funcionales?</p>
+      <input type="radio" name="iso7" value="Isomería de posición"> Isomería de posición<br>
+      <input type="radio" name="iso7" value="Isomería de cadena"> Isomería de cadena<br>
+      <input type="radio" name="iso7" value="Isomería geométrica"> Isomería geométrica<br>
+      <button type="button" onclick="revisar('iso7', 'Isomería de posición', 'isoresp7')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="isoresp7"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>8. ¿Cuál es la diferencia entre isómeros estructurales y estereoisómeros?</p>
+      <input type="radio" name="iso8" value="Estructurales difieren en la conexión; estereoisómeros en la orientación espacial"> Estructurales difieren en la conexión; estereoisómeros en la orientación espacial<br>
+      <input type="radio" name="iso8" value="Estructurales son iguales; estereoisómeros diferentes"> Estructurales son iguales; estereoisómeros diferentes<br>
+      <input type="radio" name="iso8" value="No hay diferencia"> No hay diferencia<br>
+      <button type="button" onclick="revisar('iso8', 'Estructurales difieren en la conexión; estereoisómeros en la orientación espacial', 'isoresp8')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="isoresp8"></p>
+    </form>
+  </section>
+
+  <section id="3" style="margin-top: 30px;">
+    <h2 style="color: #2a7a2a;">Nomenclatura orgánica</h2>
+
+    <form style="margin-bottom: 20px;">
+      <p>1. ¿Cuál es la regla para nombrar alcanos?</p>
+      <input type="radio" name="nom1" value="Usar sufijo -ano y prefijos para cadenas"> Usar sufijo -ano y prefijos para cadenas<br>
+      <input type="radio" name="nom1" value="Usar sufijo -eno"> Usar sufijo -eno<br>
+      <input type="radio" name="nom1" value="Usar sufijo -ol"> Usar sufijo -ol<br>
+      <button type="button" onclick="revisar('nom1', 'Usar sufijo -ano y prefijos para cadenas', 'nomresp1')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="nomresp1"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>2. ¿Qué indica el sufijo -eno en un compuesto?</p>
+      <input type="radio" name="nom2" value="Presencia de doble enlace"> Presencia de doble enlace<br>
+      <input type="radio" name="nom2" value="Presencia de triple enlace"> Presencia de triple enlace<br>
+      <input type="radio" name="nom2" value="Presencia de grupo hidroxilo"> Presencia de grupo hidroxilo<br>
+      <button type="button" onclick="revisar('nom2', 'Presencia de doble enlace', 'nomresp2')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="nomresp2"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>3. ¿Qué indica el sufijo -ino?</p>
+      <input type="radio" name="nom3" value="Presencia de triple enlace"> Presencia de triple enlace<br>
+      <input type="radio" name="nom3" value="Presencia de doble enlace"> Presencia de doble enlace<br>
+      <input type="radio" name="nom3" value="Presencia de grupo carboxilo"> Presencia de grupo carboxilo<br>
+      <button type="button" onclick="revisar('nom3', 'Presencia de triple enlace', 'nomresp3')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="nomresp3"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>4. ¿Qué nombre recibe el compuesto con un grupo -OH?</p>
+      <input type="radio" name="nom4" value="Alcohol"> Alcohol<br>
+      <input type="radio" name="nom4" value="Ácido carboxílico"> Ácido carboxílico<br>
+      <input type="radio" name="nom4" value="Aldehído"> Aldehído<br>
+      <button type="button" onclick="revisar('nom4', 'Alcohol', 'nomresp4')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="nomresp4"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>5. ¿Cómo se nombran los compuestos con grupos alquilo?</p>
+      <input type="radio" name="nom5" value="Con prefijos y posición"> Con prefijos y posición<br>
+      <input type="radio" name="nom5" value="Con sufijos"> Con sufijos<br>
+      <input type="radio" name="nom5" value="Con números romanos"> Con números romanos<br>
+      <button type="button" onclick="revisar('nom5', 'Con prefijos y posición', 'nomresp5')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="nomresp5"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>6. ¿Qué indica el prefijo “iso-”?</p>
+      <input type="radio" name="nom6" value="Cadena ramificada con ramificaciones iguales"> Cadena ramificada con ramificaciones iguales<br>
+      <input type="radio" name="nom6" value="Cadena lineal"> Cadena lineal<br>
+      <input type="radio" name="nom6" value="Cadena cíclica"> Cadena cíclica<br>
+      <button type="button" onclick="revisar('nom6', 'Cadena ramificada con ramificaciones iguales', 'nomresp6')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="nomresp6"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>7. ¿Qué número se usa para indicar la posición del grupo funcional?</p>
+      <input type="radio" name="nom7" value="El más bajo posible"> El más bajo posible<br>
+      <input type="radio" name="nom7" value="El más alto posible"> El más alto posible<br>
+      <input type="radio" name="nom7" value="Número central"> Número central<br>
+      <button type="button" onclick="revisar('nom7', 'El más bajo posible', 'nomresp7')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="nomresp7"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>8. ¿Qué indica el prefijo “ciclo-”?</p>
+      <input type="radio" name="nom8" value="Compuesto con estructura cíclica"> Compuesto con estructura cíclica<br>
+      <input type="radio" name="nom8" value="Compuesto lineal"> Compuesto lineal<br>
+      <input type="radio" name="nom8" value="Compuesto ramificado"> Compuesto ramificado<br>
+      <button type="button" onclick="revisar('nom8', 'Compuesto con estructura cíclica', 'nomresp8')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="nomresp8"></p>
+    </form>
+  </section>
+
+  <section id="4" style="margin-top: 30px;">
+    <h2 style="color: #2a7a2a;">Reacciones orgánicas</h2>
+
+    <form style="margin-bottom: 20px;">
+      <p>1. ¿Qué tipo de reacción es la adición?</p>
+      <input type="radio" name="reac1" value="Reacción donde se añade un átomo o grupo a un compuesto"> Reacción donde se añade un átomo o grupo a un compuesto<br>
+      <input type="radio" name="reac1" value="Reacción donde se pierde un átomo o grupo"> Reacción donde se pierde un átomo o grupo<br>
+      <input type="radio" name="reac1" value="Reacción de intercambio"> Reacción de intercambio<br>
+      <button type="button" onclick="revisar('reac1', 'Reacción donde se añade un átomo o grupo a un compuesto', 'reacresp1')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="reacresp1"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>2. ¿Qué es una reacción de sustitución?</p>
+      <input type="radio" name="reac2" value="Reacción donde un átomo es reemplazado por otro"> Reacción donde un átomo es reemplazado por otro<br>
+      <input type="radio" name="reac2" value="Reacción de adición"> Reacción de adición<br>
+      <input type="radio" name="reac2" value="Reacción de eliminación"> Reacción de eliminación<br>
+      <button type="button" onclick="revisar('reac2', 'Reacción donde un átomo es reemplazado por otro', 'reacresp2')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="reacresp2"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>3. ¿Qué ocurre en una reacción de eliminación?</p>
+      <input type="radio" name="reac3" value="Se pierde un átomo o grupo para formar un doble enlace"> Se pierde un átomo o grupo para formar un doble enlace<br>
+      <input type="radio" name="reac3" value="Se añade un átomo o grupo"> Se añade un átomo o grupo<br>
+      <input type="radio" name="reac3" value="Se sustituye un átomo"> Se sustituye un átomo<br>
+      <button type="button" onclick="revisar('reac3', 'Se pierde un átomo o grupo para formar un doble enlace', 'reacresp3')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="reacresp3"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>4. ¿Qué es la polimerización?</p>
+      <input type="radio" name="reac4" value="Reacción donde se unen muchas moléculas pequeñas para formar un polímero"> Reacción donde se unen muchas moléculas pequeñas para formar un polímero<br>
+      <input type="radio" name="reac4" value="Reacción donde se separan moléculas grandes"> Reacción donde se separan moléculas grandes<br>
+      <input type="radio" name="reac4" value="Reacción de oxidación"> Reacción de oxidación<br>
+      <button type="button" onclick="revisar('reac4', 'Reacción donde se unen muchas moléculas pequeñas para formar un polímero', 'reacresp4')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="reacresp4"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>5. ¿Qué es una reacción de oxidación?</p>
+      <input type="radio" name="reac5" value="Pérdida de electrones"> Pérdida de electrones<br>
+      <input type="radio" name="reac5" value="Ganancia de electrones"> Ganancia de electrones<br>
+      <input type="radio" name="reac5" value="Intercambio de electrones"> Intercambio de electrones<br>
+      <button type="button" onclick="revisar('reac5', 'Pérdida de electrones', 'reacresp5')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="reacresp5"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>6. ¿Qué ocurre en una reacción de reducción?</p>
+      <input type="radio" name="reac6" value="Ganancia de electrones"> Ganancia de electrones<br>
+      <input type="radio" name="reac6" value="Pérdida de electrones"> Pérdida de electrones<br>
+      <input type="radio" name="reac6" value="Intercambio de electrones"> Intercambio de electrones<br>
+      <button type="button" onclick="revisar('reac6', 'Ganancia de electrones', 'reacresp6')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="reacresp6"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>7. ¿Qué es una reacción de condensación?</p>
+      <input type="radio" name="reac7" value="Unión de moléculas con pérdida de agua"> Unión de moléculas con pérdida de agua<br>
+      <input type="radio" name="reac7" value="Separación de moléculas con ganancia de agua"> Separación de moléculas con ganancia de agua<br>
+      <input type="radio" name="reac7" value="Reacción de oxidación"> Reacción de oxidación<br>
+      <button type="button" onclick="revisar('reac7', 'Unión de moléculas con pérdida de agua', 'reacresp7')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="reacresp7"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>8. ¿Qué es una reacción de hidrólisis?</p>
+      <input type="radio" name="reac8" value="Ruptura de moléculas con agua"> Ruptura de moléculas con agua<br>
+      <input type="radio" name="reac8" value="Unión de moléculas con pérdida de agua"> Unión de moléculas con pérdida de agua<br>
+      <input type="radio" name="reac8" value="Reacción de reducción"> Reacción de reducción<br>
+      <button type="button" onclick="revisar('reac8', 'Ruptura de moléculas con agua', 'reacresp8')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="reacresp8"></p>
+    </form>
+  </section>
+  <section id="5" style="margin-top: 30px;">
+    <h2 style="color: #2a7a2a;">Reconocimiento de estructuras</h2>
+
+    <form style="margin-bottom: 20px;">
+      <p>1. ¿Cuál es la fórmula del metano?</p>
+      <input type="radio" name="rec1" value="CH₄"> CH₄<br>
+      <input type="radio" name="rec1" value="C₂H₆"> C₂H₆<br>
+      <input type="radio" name="rec1" value="C₃H₈"> C₃H₈<br>
+      <button type="button" onclick="revisar('rec1', 'CH₄', 'recresp1')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="recresp1"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>2. ¿Cuál es la fórmula del etano?</p>
+      <input type="radio" name="rec2" value="C₂H₆"> C₂H₆<br>
+      <input type="radio" name="rec2" value="CH₄"> CH₄<br>
+      <input type="radio" name="rec2" value="C₄H₁₀"> C₄H₁₀<br>
+      <button type="button" onclick="revisar('rec2', 'C₂H₆', 'recresp2')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="recresp2"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>3. ¿Cuál es la fórmula del propano?</p>
+      <input type="radio" name="rec3" value="C₃H₈"> C₃H₈<br>
+      <input type="radio" name="rec3" value="C₂H₆"> C₂H₆<br>
+      <input type="radio" name="rec3" value="C₅H₁₂"> C₅H₁₂<br>
+      <button type="button" onclick="revisar('rec3', 'C₃H₈', 'recresp3')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="recresp3"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>4. ¿Cuál es la fórmula del butano?</p>
+      <input type="radio" name="rec4" value="C₄H₁₀"> C₄H₁₀<br>
+      <input type="radio" name="rec4" value="C₃H₈"> C₃H₈<br>
+      <input type="radio" name="rec4" value="C₂H₆"> C₂H₆<br>
+      <button type="button" onclick="revisar('rec4', 'C₄H₁₀', 'recresp4')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="recresp4"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>5. ¿Cuál es la fórmula del pentano?</p>
+      <input type="radio" name="rec5" value="C₅H₁₂"> C₅H₁₂<br>
+      <input type="radio" name="rec5" value="C₄H₁₀"> C₄H₁₀<br>
+      <input type="radio" name="rec5" value="C₃H₈"> C₃H₈<br>
+      <button type="button" onclick="revisar('rec5', 'C₅H₁₂', 'recresp5')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="recresp5"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>6. ¿Cuál es la fórmula del hexano?</p>
+      <input type="radio" name="rec6" value="C₆H₁₄"> C₆H₁₄<br>
+      <input type="radio" name="rec6" value="C₅H₁₂"> C₅H₁₂<br>
+      <input type="radio" name="rec6" value="C₄H₁₀"> C₄H₁₀<br>
+      <button type="button" onclick="revisar('rec6', 'C₆H₁₄', 'recresp6')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="recresp6"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>7. ¿Cuál es la fórmula del heptano?</p>
+      <input type="radio" name="rec7" value="C₇H₁₆"> C₇H₁₆<br>
+      <input type="radio" name="rec7" value="C₆H₁₄"> C₆H₁₄<br>
+      <input type="radio" name="rec7" value="C₈H₁₈"> C₈H₁₈<br>
+      <button type="button" onclick="revisar('rec7', 'C₇H₁₆', 'recresp7')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="recresp7"></p>
+    </form>
+
+    <form style="margin-bottom: 20px;">
+      <p>8. ¿Cuál es la fórmula del octano?</p>
+      <input type="radio" name="rec8" value="C₈H₁₈"> C₈H₁₈<br>
+      <input type="radio" name="rec8" value="C₇H₁₆"> C₇H₁₆<br>
+      <input type="radio" name="rec8" value="C₆H₁₄"> C₆H₁₄<br>
+      <button type="button" onclick="revisar('rec8', 'C₈H₁₈', 'recresp8')" style="margin-top: 5px; background-color: #84c784; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Revisar</button>
+      <p id="recresp8"></p>
+    </form>
+  </section>
+
+  <script>
+    function revisar(name, correcta, idresp) {
+      const opciones = document.getElementsByName(name);
+      let seleccion = "";
+      for (const opcion of opciones) {
+        if (opcion.checked) {
+          seleccion = opcion.value;
+          break;
+        }
+      }
+      const resp = document.getElementById(idresp);
+      if (seleccion === "") {
+        resp.textContent = "Por favor, selecciona una opción.";
+        resp.style.color = "red";
+        return;
+      }
+      if (seleccion === correcta) {
+        resp.textContent = "Correctoo :b";
+        resp.style.color = "green";
+      } else {
+        resp.textContent = "Intenta de nuevo, tu puedes nwn";
+        resp.style.color = "red";
+      }
+    }
+  </script>
+   <p>Gracias por visitar, espero que aprendan mucho aquí :b</p>
+    <p>Hecho por López Salmerón Marely de 4°A p/m, junio (el mejor mes porque regresa BTS)</p>
+    <p>Te amo tete :3</p>
+</body>
+</html>
