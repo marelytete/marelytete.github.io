@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quimitata Quiz</title>
+  <style>
+</style>
 </head>
 <body style="font-family: Arial, sans-serif; background-color: #f0fff0; padding: 20px; color: #333;">
 <p style="color: #2a7a2a;font-size: 48;"><b> Preguntas de quimica inorganica</b></p>
@@ -404,15 +406,27 @@
   </form>
 </section>
   <script>
-    function revisar(nombre, correcta, idTexto) {
-      const seleccion = document.querySelector('input[name="' + nombre + '"]:checked');
-      const respuesta = document.getElementById(idTexto);
-      if (!seleccion) {
-        respuesta.innerText = "Selecciona una opción.";
-      } else if (seleccion.value === correcta) {
-        respuesta.innerText = "Correctooo :b";
+    function revisar(name, correcta, idresp) {
+      const opciones = document.getElementsByName(name);
+      let seleccion = "";
+      for (const opcion of opciones) {
+        if (opcion.checked) {
+          seleccion = opcion.value;
+          break;
+        }
+      }
+      const resp = document.getElementById(idresp);
+      if (seleccion === "") {
+        resp.textContent = "Por favor, selecciona una opción.";
+        resp.style.color = "red";
+        return;
+      }
+      if (seleccion === correcta) {
+        resp.textContent = "Correctoo :b";
+        resp.style.color = "green";
       } else {
-        respuesta.innerText = "Intenta de nuevo, tu puedes nwn";
+        resp.textContent = "Intenta de nuevo, tu puedes nwn";
+        resp.style.color = "red";
       }
     }
   </script>
